@@ -7,7 +7,7 @@ import ParseTrace from "./ParseTrace";
 
 export default class BaseAutoCompleteHandler {
     quote(text: string) {
-        if (/\s/g.test(text)) {
+        if (/(\s|\(|\))/g.test(text)) {
             return `"${text}"`;
         }
 
@@ -59,11 +59,11 @@ export default class BaseAutoCompleteHandler {
 
     hasCategory(category: string): boolean {
         return false;
-    } 
+    }
 
     hasOperator(category: string, operator: string): boolean {
         return false;
-    } 
+    }
 
     needCategories(): string[] {
         return []

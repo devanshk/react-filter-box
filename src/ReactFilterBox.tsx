@@ -21,7 +21,7 @@ export default class ReactFilterBox extends React.Component<any, any> {
         autoCompleteHandler: null,
         onBlur: () => { },
         onFocus: () => { },
-        editorConfig: { },
+        editorConfig: {},
         strictMode: false
     };
 
